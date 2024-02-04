@@ -1,0 +1,89 @@
+*{ /* Esto aplica a todo el documento*/
+    padding: 0; /* El documento no tendra rellenos de inicio*/
+    margin: 0; /* El documento no tendra margenes de inicio */
+}
+
+html{ /* Esto aplica a todo el html*/
+    background-color: yellow; /* Tedran un color de fondo amarillo */
+}
+
+header{ /* Esto se aplica a la etiqueta header */
+    background-color: red; /* Tendra un color de fondo rojo */
+    height: 300px; /* Este apartado solo utilizara 300 pixeles de altura */
+}
+
+main{ /* Esto se aplica a la etiqueta main */
+    background-color: yellow; /* Tedran un color de fondo amarillo */
+    height: 300px; /* Este apartado solo utilizara 300 pixeles de altura */
+}
+
+footer{ /* Esto se aplica a la etiqueta footer */
+    background-color: red; /* tedran un color de fondo rojo */
+    height: 300px; /* Este apartado solo utilizara 300 pixeles de altura */
+}
+
+.fotoFooter{ /* Esto aplica a la clase fotoFototer de un div principal*/
+    width: 300px; /* Tendra una anchura de 300 pixeles*/
+    border: 1px solid #000000; /* Tendra un borde de 1 pixel solido de color negro */
+    border-radius: 15px; /* Tendra un redondeo en el borde de 15 pixeles*/
+    background-color: transparent; /* Tendra un color de fondo transparente */
+    transform: rotate(20deg); /* Tendra una rotacion de 20 */
+    box-shadow: 5px 5px 10px rgba(2, 2, 2, 2); /* Le aplico un sombreado */
+    transition: transform 0.7s; /* Le aplico una transicion de o,7 segundos */
+    position: absolute; /* Tendro posicion absoluta */
+    right: 0; /* Tendra 0 a la derecha */
+    bottom: 0; /* Tendra una altura de 0 */
+    animation: fotoFooter 6s linear infinite; /* Aplico una animacion de 4 segundos infinita */
+}
+
+.containerFooter:hover .fotoFooter { /* Esto se aplica al containerFooter cuando estas encima y al fotoFooter */
+    transform: rotate(180deg);/* Se le aplica una rotacion de 180 */
+} 
+
+.containerFooter .nombre { /* Se aplica al containerFooter y al nombre */
+    position: absolute; /* posicion absoluta */
+    backface-visibility: hidden; /* Al quitar el raton se va*/
+    transform: rotateY(180deg); /* Rotacion de 180 */
+    display: flex; /* Estara centrado */
+    justify-content: center; /* Estara centrado */
+    align-items: center; /* /* Estara centrado */
+    text-align: center; /* /* Estara centrado */
+    color: white; /* Añade color al texto para que sea visible */
+    padding: 10px; /* Relleno de 10 pixeles */
+    transition: transform 0.7s; /* Transicion */
+    height: 410px; /* Altura */
+    width: 280px; /* Anchura */
+    border: 1px solid #000000; /* Tenra un borde de 1 pixel solido negro */
+    border-radius: 15px; /* Tendra un borde redondeado de 15 pixeles */
+    background-color: transparent; /* Tednra color de fondo transparente */
+    box-shadow: 5px 5px 10px rgba(2, 2, 2, 2); /* Le aplico un sombreado */
+    right: 0; /* Se aplica pegado a la derecha */
+    bottom: 0; /* Se aplica pegado abajo */
+    font-size: 30px; /* Tamaño */
+}
+
+.containerFooter:hover .nombre { /* /* Esto se aplica al containerFooter cuando estas encima y al fotoFooter */
+    transform: rotateY(0deg); /* No le aplico rotacion al eje Y */
+}
+
+@keyframes fotoFooter{ /* Aplico animacion a fotoFooter */
+    0% { /* Aplico al incio */
+        background-color: transparent; /* Color de fondo */
+        left: 0; /* Izquierda 0 */
+        top: 0; /* Altura 0 */
+        transform: rotate(405deg); /* Rotacion */
+    }
+    50% { /* Aplico al intermedio */
+        background-color: transparent; /* Color de fondo */
+        left: 2000px; /* Izquierda 2000 */
+        top: 500px; /* Altura 500 */
+        transform: rotate(405deg); /* Rotacion */
+    }
+    100% { /* Aplico al final */
+        background-color: transparent; /* Color de fondo */
+        left: 0; /* Izquierda 0 */
+        top: 0; /* Altura 0 */
+        transform: rotate(405deg);/* Rotacion */
+    } 
+    
+}
