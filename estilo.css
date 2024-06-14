@@ -261,6 +261,7 @@ main {
     margin-left: -900px;
     position: relative;
     animation: celebracion2 2s ease-in-out infinite;
+    z-index: 2;
 }
 
 @keyframes celebracion2 {
@@ -309,4 +310,32 @@ main {
     width: 300px;
     margin: -300px 0px 0px 900px;
     position: absolute;
+}
+
+a{
+    color: aliceblue;
+    list-style: none;
+    text-decoration: none;
+}
+
+.celebracion3{
+    height: 100px;
+    margin-top: -60px;
+    margin-left: -1021px;
+    position: relative;
+}
+
+.celebracion4{
+    height: 100px;
+    margin-top: -102px;
+    margin-left: 780px;
+    position: relative;
+}
+
+.celebracion5{
+    height: 100px;
+    margin-top: -402px;
+    margin-left: -1021px;
+    position: relative;
+    z-index: 1;
 }
