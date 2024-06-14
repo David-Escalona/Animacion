@@ -1,89 +1,312 @@
-*{ /* Esto aplica a todo el documento*/
-    padding: 0; /* El documento no tendra rellenos de inicio*/
-    margin: 0; /* El documento no tendra margenes de inicio */
+* {
+    padding: 0;
+    margin: 0;
 }
 
-html{ /* Esto aplica a todo el html*/
-    background-color: yellow; /* Tedran un color de fondo amarillo */
+html {
+    font-family: 'Comfortaa', sans-serif;
+    width: 100%;
 }
 
-header{ /* Esto se aplica a la etiqueta header */
-    background-color: red; /* Tendra un color de fondo rojo */
-    height: 300px; /* Este apartado solo utilizara 300 pixeles de altura */
+.fotoFooter {
+    width: 300px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    background-color: transparent;
+    transform: rotate(20deg);
+    box-shadow: 5px 5px 10px rgba(2, 2, 2, 0.2);
+    transition: transform 0.7s;
+    position: absolute;
+    right: 0;
+    bottom: 0;
 }
 
-main{ /* Esto se aplica a la etiqueta main */
-    background-color: yellow; /* Tedran un color de fondo amarillo */
-    height: 300px; /* Este apartado solo utilizara 300 pixeles de altura */
+.containerFooter:hover .fotoFooter {
+    transform: rotate(180deg);
 }
 
-footer{ /* Esto se aplica a la etiqueta footer */
-    background-color: red; /* tedran un color de fondo rojo */
-    height: 300px; /* Este apartado solo utilizara 300 pixeles de altura */
+.containerFooter .nombre {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    transition: transform 0.7s;
+    height: 410px;
+    width: 280px;
+    border: 1px solid #000000;
+    border-radius: 15px;
+    background-color: transparent;
+    box-shadow: 5px 5px 10px rgba(2, 2, 2, 0.2);
+    right: 0;
+    bottom: 0;
+    font-size: 30px;
 }
 
-.fotoFooter{ /* Esto aplica a la clase fotoFototer de un div principal*/
-    width: 300px; /* Tendra una anchura de 300 pixeles*/
-    border: 1px solid #000000; /* Tendra un borde de 1 pixel solido de color negro */
-    border-radius: 15px; /* Tendra un redondeo en el borde de 15 pixeles*/
-    background-color: transparent; /* Tendra un color de fondo transparente */
-    transform: rotate(20deg); /* Tendra una rotacion de 20 */
-    box-shadow: 5px 5px 10px rgba(2, 2, 2, 2); /* Le aplico un sombreado */
-    transition: transform 0.7s; /* Le aplico una transicion de o,7 segundos */
-    position: absolute; /* Tendro posicion absoluta */
-    right: 0; /* Tendra 0 a la derecha */
-    bottom: 0; /* Tendra una altura de 0 */
-    animation: fotoFooter 6s linear infinite; /* Aplico una animacion de 4 segundos infinita */
+.containerFooter:hover .nombre {
+    transform: rotateY(0deg);
 }
 
-.containerFooter:hover .fotoFooter { /* Esto se aplica al containerFooter cuando estas encima y al fotoFooter */
-    transform: rotate(180deg);/* Se le aplica una rotacion de 180 */
-} 
-
-.containerFooter .nombre { /* Se aplica al containerFooter y al nombre */
-    position: absolute; /* posicion absoluta */
-    backface-visibility: hidden; /* Al quitar el raton se va*/
-    transform: rotateY(180deg); /* Rotacion de 180 */
-    display: flex; /* Estara centrado */
-    justify-content: center; /* Estara centrado */
-    align-items: center; /* /* Estara centrado */
-    text-align: center; /* /* Estara centrado */
-    color: white; /* Añade color al texto para que sea visible */
-    padding: 10px; /* Relleno de 10 pixeles */
-    transition: transform 0.7s; /* Transicion */
-    height: 410px; /* Altura */
-    width: 280px; /* Anchura */
-    border: 1px solid #000000; /* Tenra un borde de 1 pixel solido negro */
-    border-radius: 15px; /* Tendra un borde redondeado de 15 pixeles */
-    background-color: transparent; /* Tednra color de fondo transparente */
-    box-shadow: 5px 5px 10px rgba(2, 2, 2, 2); /* Le aplico un sombreado */
-    right: 0; /* Se aplica pegado a la derecha */
-    bottom: 0; /* Se aplica pegado abajo */
-    font-size: 30px; /* Tamaño */
+.fondoHeader {
+    background-color: #000000;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: aliceblue;
 }
 
-.containerFooter:hover .nombre { /* /* Esto se aplica al containerFooter cuando estas encima y al fotoFooter */
-    transform: rotateY(0deg); /* No le aplico rotacion al eje Y */
+.toggleMenu {
+    display: flex;
+    align-items: center;
 }
 
-@keyframes fotoFooter{ /* Aplico animacion a fotoFooter */
-    0% { /* Aplico al incio */
-        background-color: transparent; /* Color de fondo */
-        left: 0; /* Izquierda 0 */
-        top: 0; /* Altura 0 */
-        transform: rotate(405deg); /* Rotacion */
+.toggleMenu ul.submenu {
+    display: none;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.containerHeader {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+.quitaPunto {
+    list-style: none;
+    text-decoration: none;
+}
+
+.letra {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 5rem;
+}
+
+.inline {
+    display: inline;
+}
+
+main {
+    background-image: url('/img/porteria.jpg');
+    max-width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    max-height: 400px;
+    width: auto;
+    background-color: #000000;
+    position: relative; /* Cambiado a relativo para mantener las imágenes dentro */
+}
+
+.messi {
+    position: absolute;
+    top: 200px; /* Ajustar según sea necesario */
+    left: 50%; /* Ajustar según sea necesario */
+    transform: translateX(-50%);
+    width: 200px;
+    height: auto;
+    animation: messi 6s ease-in-out infinite;
+    z-index: 2;
+}
+
+.pelota {
+    position: absolute;
+    top: 90%; /* Ajustar según sea necesario */
+    left: 50%; /* Ajustar según sea necesario */
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    animation: pelota 2s ease-in-out infinite;
+}
+
+@keyframes pelota {
+    0%, 100% {
+        transform: translate(-50%, -40%);
     }
-    50% { /* Aplico al intermedio */
-        background-color: transparent; /* Color de fondo */
-        left: 2000px; /* Izquierda 2000 */
-        top: 500px; /* Altura 500 */
-        transform: rotate(405deg); /* Rotacion */
+    50% {
+        transform: translate(-50%, -350%) translateY(-20px) translateX(-20px);
     }
-    100% { /* Aplico al final */
-        background-color: transparent; /* Color de fondo */
-        left: 0; /* Izquierda 0 */
-        top: 0; /* Altura 0 */
-        transform: rotate(405deg);/* Rotacion */
-    } 
-    
+}
+
+@keyframes messi {
+    0%, 100% {
+        transform: translate(-20%, -40%);
+    }
+    50% {
+        transform:   translateX(20px);
+    }
+}
+
+.grada1{
+    position: absolute;
+    top: 200px; /* Ajustar según sea necesario */
+    left: 0px; /* Ajustar según sea necesario */
+    width: 350px;
+    height: auto;
+    max-width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    max-height: 200px;
+    width: auto;
+    background-color: #000000;
+    position: relative; /* Cambiado a relativo para mantener las imágenes dentro */
+}
+
+.grada2{
+    position: absolute;
+    top: 0px; /* Ajustar según sea necesario */
+    left: -300px; /* Ajustar según sea necesario */
+    width: 350px;
+    height: auto;
+    max-width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    max-height: 200px;
+    width: auto;
+    background-color: #000000;
+    position: relative; /* Cambiado a relativo para mantener las imágenes dentro */
+}
+
+.grada3{
+    position: absolute;
+    top: 0px; /* Ajustar según sea necesario */
+    left: 300px; /* Ajustar según sea necesario */
+    width: 350px;
+    height: auto;
+    max-width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    max-height: 200px;
+    width: auto;
+    background-color: #000000;
+    position: relative; /* Cambiado a relativo para mantener las imágenes dentro */
+}
+
+.grada4{
+    position: absolute;
+    top: 200px; /* Ajustar según sea necesario */
+    left: 0px; /* Ajustar según sea necesario */
+    width: 350px;
+    height: auto;
+    max-width: 100%;
+    height: 400px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    max-height: 200px;
+    width: auto;
+    background-color: #000000;
+    position: relative; /* Cambiado a relativo para mantener las imágenes dentro */
+}
+
+.flex{
+    display: flex;
+    justify-content: center;
+}
+
+.celebracion1{
+    height: 100px;
+    margin-left: -700px;
+    position: relative;
+    animation: celebracion1 2s ease-in-out infinite;
+}
+
+@keyframes celebracion1 {
+    0% {
+        transform: translate(-20%, -40%) rotate(0deg);
+    }
+    50% {
+        transform: translate(-20%, -40%) rotate(180deg);
+    }
+    100% {
+        transform: translate(-20%, -40%) rotate(360deg);
+    }
+}
+
+.fondoFooter {
+    background-color: #000000;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 14px 14px 20px 0 rgba(20, 20, 20, 0.3);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: aliceblue;
+}
+
+.celebracion2{
+    height: 100px;
+    margin-top: -250px;
+    margin-left: -900px;
+    position: relative;
+    animation: celebracion2 2s ease-in-out infinite;
+}
+
+@keyframes celebracion2 {
+    0% {
+        transform: translateX(-10%);
+    }
+    50% {
+        transform: translateX(60%);
+    }
+    100% {
+        transform: translateX(-10%);
+    }
+}
+
+.arbitro{
+    width: 350px;
+    position: relative;
+    margin-top: -200px;
+    margin-right: 400px;
+    animation: arbitro 2s ease-in-out infinite;
+}
+
+@keyframes arbitro {
+    0% {
+        transform: translateX(10%);
+    }
+    50% {
+        transform: translateX(30%);
+    }
+    100% {
+        transform: translateX(10%);
+    }
+}
+
+.portero{
+    width: 200px;
+    position: absolute;
+    margin-top: -200px;
+    margin-right: 100px;
+    animation: arbitro 3s ease-in-out infinite;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.grada{
+    width: 300px;
+    margin: -300px 0px 0px 900px;
+    position: absolute;
 }
